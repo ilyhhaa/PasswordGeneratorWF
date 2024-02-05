@@ -6,5 +6,10 @@ namespace PasswordGeneratorWF
         {
             InitializeComponent();
         }
+
+        private void copyPasswordButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
