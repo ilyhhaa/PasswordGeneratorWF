@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             passwordLabel = new Label();
-            passwordLength = new Label();
+            passwordLength_Label = new Label();
             passwordLengthSlider = new TrackBar();
             copyPasswordButton = new Button();
             ((System.ComponentModel.ISupportInitialize)passwordLengthSlider).BeginInit();
@@ -44,14 +44,15 @@
             passwordLabel.TabIndex = 0;
             passwordLabel.Text = "label1";
             // 
-            // passwordLength
+            // passwordLength_Label
             // 
-            passwordLength.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            passwordLength.Location = new Point(335, 173);
-            passwordLength.Name = "passwordLength";
-            passwordLength.Size = new Size(338, 66);
-            passwordLength.TabIndex = 1;
-            passwordLength.Text = "Password Length : 5";
+            passwordLength_Label.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            passwordLength_Label.Location = new Point(335, 173);
+            passwordLength_Label.Name = "passwordLength_Label";
+            passwordLength_Label.Size = new Size(338, 66);
+            passwordLength_Label.TabIndex = 1;
+            passwordLength_Label.Text = "Password Length : 5";
+            passwordLength_Label.Click += passwordLength_Click;
             // 
             // passwordLengthSlider
             // 
@@ -59,6 +60,7 @@
             passwordLengthSlider.Name = "passwordLengthSlider";
             passwordLengthSlider.Size = new Size(448, 45);
             passwordLengthSlider.TabIndex = 2;
+            passwordLengthSlider.Scroll += passwordLengthSlider_Scroll;
             // 
             // copyPasswordButton
             // 
@@ -68,7 +70,7 @@
             copyPasswordButton.TabIndex = 3;
             copyPasswordButton.Text = "CopyPassword";
             copyPasswordButton.UseVisualStyleBackColor = true;
-            copyPasswordButton.Click += copyPasswordButton;
+            copyPasswordButton.Click += button1_Click;
             // 
             // Form1
             // 
@@ -77,7 +79,7 @@
             ClientSize = new Size(824, 473);
             Controls.Add(copyPasswordButton);
             Controls.Add(passwordLengthSlider);
-            Controls.Add(passwordLength);
+            Controls.Add(passwordLength_Label);
             Controls.Add(passwordLabel);
             Name = "Form1";
             Text = "PasswordGenerator";
@@ -89,7 +91,7 @@
         #endregion
 
         private Label passwordLabel;
-        private Label passwordLength;
+        private Label passwordLength_Label;
         private TrackBar passwordLengthSlider;
         private Button copyPasswordButton;
     }
